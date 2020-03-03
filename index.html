@@ -9,12 +9,15 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Include SmartWizard CSS -->
+  <link href="src/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+  <!-- Optional SmartWizard theme -->
+  <link href="src/css/smart_wizard_theme_dots.css" rel="stylesheet" type="text/css" />
 
+  <link href="src/css/site.css" rel="stylesheet" type="text/css" />
+  <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 
-
-
-
-  <title>Projeto-Grafica</title>
+  <title>Orçamentos Grátis</title>
 </head>
 
 <body id="page-top">
@@ -22,6 +25,7 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -34,88 +38,482 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-lg-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-      </ul>
+  <script src="https://kit.fontawesome.com/f13bd2d1fd.js" crossorigin="anonymous"></script>
 
-    </div>
-  </nav>
-
-
-
-
-
-
-
-
-
-  <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('img/banner1.webp')">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="display-4">First Slide</h2>
-            <p class="lead">This is a description for the first slide.</p>
-          </div>
-        </div>
-        <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('img/banner2.webp')">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="display-4">Second Slide</h2>
-            <p class="lead">This is a description for the second slide.</p>
-          </div>
-        </div>
-        <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('img/banner3.webp')">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="display-4">Third Slide</h2>
-            <p class="lead">This is a description for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Page Content -->
-  <section class="py-5">
+  <section id="orcamento" class="py-5">
     <div class="container">
-      <h1 class="display-4">Full Page Image Slider</h1>
-      <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The images in
-        this snippet are from <a href="https://unsplash.com">Unsplash</a>, taken by <a
-          href="https://unsplash.com/@joannakosinska">Joanna Kosinska</a>!</p>
+      <h1 class="display-4">Orçamentos Grátis</h1>
+      <p class="lead">Encontre aqui os melhores orçamentos gráficos. Trabalho personalizado e de qualidade superior ,
+        com os melhores <a href="#servicos">Serviços</a>!</p>
+
+      <div class="container">
+        <br />
+        <form action="https://formspree.io/mjvwnpja" id="myForm" role="form" data-toggle="validator" method="post"
+          accept-charset="utf-8">
+
+          <!-- SmartWizard html -->
+          <div id="smartwizard">
+            <ul>
+              <li><a href="#step-1">Step 1<br /><small>Serviços</small></a></li>
+              <li><a href="#step-2">Step 2<br /><small>Papel</small></a></li>
+              <li><a href="#step-3">Step 3<br /><small>Pedido</small></a></li>
+              <li><a href="#step-4">Step 4<br /><small>Acabamentos</small></a></li>
+              <li><a href="#step-5">Step 4<br /><small>Observações</small></a></li>
+              <li><a href="#step-6">Step 6<br /><small>Finish</small></a></li>
+            </ul>
+
+            <div>
+              <div id="step-1">
+                <h2 class="text-secondary">Serviços</h2>
+                <p class="lead">EM QUE SERVIÇO ESTÁ INTERESSADO</p>
+                <div id="form-step-0" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <!-- <label for="email">Email address:</label>
+                                      <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Write your email address" required> -->
+
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked1" name="Serviços"
+                        value="Cartões de Visita">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked1">Cartões de
+                        Visita</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked2" name="Serviços"
+                        value="Brochuras/Catálogos">
+                      <label class="custom-control-label text-secondary"
+                        for="defaultUnchecked2">Brochuras/Catálogos</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked3" name="Serviços"
+                        value="Flyers/Desdobráveis">
+                      <label class="custom-control-label text-secondary"
+                        for="defaultUnchecked3">Flyers/Desdobráveis</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked4" name="Serviços"
+                        value="4">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked4">Livros</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked5" name="Serviços"
+                        value="Livros">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked5">Livros</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked6" name="Serviços"
+                        value="Revistas">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked6">Revistas</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked7" name="Serviços"
+                        value="Cartaz">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked7">Cartaz</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked8" name="Serviços"
+                        value="Papel de Carta">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked8">Papel de Carta</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked9" name="Serviços"
+                        value="Pasta">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked9">Pasta</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked10" name="Serviços"
+                        value="Envelopes">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked10">Envelopes</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked11" name="Serviços"
+                        value="Etiquetas">
+                      <label class="custom-control-label text-secondary" for="defaultUnchecked11">Etiquetas</label>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="soutro">Outro:</label>
+
+                      <input type="text" class="form-control form-control-sm" name="Serviços" id="soutro"
+                        placeholder="Outro...">
+                    </div>
+
+
+
+
+
+
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+
+              </div>
+              <div id="step-2">
+                <h2 class="text-secondary">Papel</h2>
+                <div id="form-step-1" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <!--<label for="name">Name:</label>
+                                    <input type="text" class="form-control" name="name" id="email"
+                                        placeholder="Write your name" required> -->
+                    <p class="lead">Tipo de Papel</p>
+
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedP1" name="Tipo de Papel"
+                        value="10R">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP1">10R</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedP2" name="Tipo de Papel"
+                        value="Couché Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP2">Couché Brilho</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedP3" name="Tipo de Papel"
+                        value="Couché Mate">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP3">Couché Mate</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedP4" name="Tipo de Papel"
+                        value="Couché Sem Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP4">Couché Sem
+                        Brilho</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedP5" name="Tipo de Papel"
+                        value="Fine Paper">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP5">Fine Paper</label>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="toutro">Outro:</label>
+                      <input type="text" class="form-control form-control-sm" name="Tipo de Papel" id="toutro"
+                        placeholder="Outro...">
+                    </div>
+                    </br>
+
+                    <p class="lead">Gramagens</p>
+
+                    <div class="form-row">
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG1" name="Gramagem"
+                            value="80g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG1">80g</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG2" name="Gramagem"
+                            value="100g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG2">100g</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG3" name="Gramagem"
+                            value="150g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG3">150g</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG4" name="Gramagem"
+                            value="200g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG4">200g</label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG5" name="Gramagem"
+                            value="250g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG5">250g</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG6" name="Gramagem"
+                            value="300g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG6">300g</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="defaultUncheckedPG7" name="Gramagem"
+                            value="350g">
+                          <label class="custom-control-label text-secondary" for="defaultUncheckedPG7">350g</label>
+                        </div>
+                        <div class="custom-control">
+                          <label class="text-secondary" for="goutro">Outro:</label>
+                          <input type="number" class="form-control form-control-sm" name="Gramagem" id="goutro"
+                            placeholder="Outro...">
+                        </div>
+                      </div>
+                    </div>
+                    <!--
+                    <label class="text-secondary" for="request">Descição</label>
+                    <textarea class="form-control" name="request" id="request" rows="3"
+                      placeholder="Write your Request..." required></textarea>
+
+
+                    <label class="text-secondary" for="quantidade">Quantidade</label>
+                    <input type="number" class="form-control" name="quantidade" id="quantidade"
+                      placeholder="Quantidade..." required></input>
+-->
+
+                    <div class="help-block with-errors text-secondary"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-3">
+                <h2 class="text-secondary">Pedido</h2>
+                <p class="lead">Quantidade/Cor/Dimensão</p>
+                <div id="form-step-2" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <!-- <label class="text-secondary" for="obs">Observações</label>
+                    <textarea class="form-control text-secondary" name="obs" id="obs" rows="3"
+                      placeholder="Write your Observations..." required></textarea> -->
+                    <div class="custom-control">
+                      <label class="text-secondary" for="exemplares">Número de Exemplares:</label>
+                      <input type="number" class="form-control form-control-sm" name="Nº Exemplares" id="exemplares"
+                        placeholder="Número de Exemplares">
+                    </div>
+
+                    </br>
+                    <div class="custom-control">
+                      <label class="text-secondary">Frente e Verso:</label>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline1" name="Frente e Verso"
+                          value="Sim">
+                        <label class="custom-control-label" for="defaultInline1">sim</label>
+                      </div>
+
+                      <!-- Default inline 2-->
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="defaultInline2" name="Frente e Verso"
+                          value="Não">
+                        <label class="custom-control-label" for="defaultInline2">não</label>
+                      </div>
+                    </div>
+                    </br>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedPC1" name="Cores"
+                        value="Sim">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedPC1">Cores</label>
+                    </div>
+                    </br>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedPC2" name="Preto &
+                      Branco" value="Sim">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedPC2">Preto &
+                        Branco</label>
+                    </div>
+                    </br>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="dimensao">Dimensão:</label>
+                      <input type="text" class="form-control form-control-sm" name="Dimensão" id="dimensao"
+                        placeholder="Dimensão do Trabalho">
+                    </div>
+
+                    <div class="help-block with-errors text-secondary"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-4">
+                <h2 class="text-secondary">Acabamentos</h2>
+                <p class="lead">Acabamentos</p>
+                <div id="form-step-3" role="form" data-toggle="validator">
+                  <div class="form-group">
+
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA1" name="Acabamentos"
+                        value="Corte Simples(Gilhotina)">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA1">Corte Simples
+                        (Gilhotina)</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA2" name="Acabamentos"
+                        value="Corte Especial(Cortante)">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA2">Corte Especial
+                        (Cortante)</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA3" name="Acabamentos"
+                        value="Verniz Com Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA3">Verniz Com
+                        Brilho</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA4" name="Acabamentos"
+                        value="Verniz Sem Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA4">Verniz Sem
+                        Brilho</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA5" name="Acabamentos"
+                        value="Verniz UV Localizado">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA5">Verniz UV
+                        Localizado</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA6" name="Acabamentos"
+                        value="Plastificação Mate">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA6">Plastificação
+                        Mate</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA7" name="Acabamentos"
+                        value="Plastificação Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA7">Plastificação
+                        Brilho</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA8" name="Acabamentos"
+                        value="Relevo">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA8">Relevo</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA9" name="Acabamentos"
+                        value="Estampagem">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA9">Estampagem</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA10" name="Acabamentos"
+                        value="Vinco & Dobra">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA10">Vinco & Dobra</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA11" name="Acabamentos"
+                        value="Colagem">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA11">Colagem</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="defaultUncheckedA12" name="Acabamentos"
+                        value="Cozedura">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA12">Cozedura</label>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="outro">Outro:</label>
+
+                      <input type="text" class="form-control form-control-sm" name="Acabamentos" id="outro"
+                        placeholder="Outro...">
+                    </div>
+                    <!--  <label for="terms">I agree with the T&C</label>
+                                    <input type="checkbox" id="terms"
+                                        data-error="Please accept the Terms and Conditions" required> -->
+
+                    <!--  <label class="text-secondary" for="email">Email address:</label>
+                    <input type="email" class="form-control" name="email" id="email"
+                      placeholder="Write your email address" required>
+
+                    <label class="text-secondary" for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Write your Name"
+                      required>
+
+                    <label class="text-secondary" for="contact">Contacto:</label>
+                    <input type="tel" class="form-control" name="contact" id="contact" placeholder="Write your Contact"
+                      required>
+
+                    <label class="text-secondary" for="adress">Address</label>
+                    <textarea class="form-control text-secondary" name="adress" id="adress" rows="3"
+                      placeholder="Write your Address..." required></textarea>-->
+
+
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+              <div id="step-5">
+                <h3>Observações</h3>
+                <p class="lead">Observações</p>
+                <div id="form-step-4" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <!--  <label for="terms">I agree with the T&C</label>
+                                    <input type="checkbox" id="terms"
+                     
+                                   data-error="Please accept the Terms and Conditions" required> -->
+                    <div class="custom-control">
+                      <label class="text-secondary" for="obse">Observações</label>
+                      <textarea class="form-control text-secondary" name="Observações" id="obse" rows="3"
+                        placeholder="Observações..."></textarea>
+
+                    </div>
+
+                    </br>
+                    <label class="text-secondary col-sm-4" for="prazoentrega">Prazo de Entrega</label>
+                    <div class="input-group date col-sm-4" id="datetimepicker1" data-target-input="nearest">
+
+                      <input type="text" id="prazoentrega" name="Prazo de Entrega"
+                        class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                      <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                      </div>
+
+                    </div>
+
+
+
+                    <!-- <div class="help-block with-errors"></div> -->
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div id="step-6">
+                <h3>Conclusão</h3>
+                <p class="lead">Contactos</p>
+                <div id="form-step-5" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <!--  <label for="terms">I agree with the T&C</label>
+                                    <input type="checkbox" id="terms"
+                                        data-error="Please accept the Terms and Conditions" required> -->
+                    <div class="custom-control">
+                      <label class="text-secondary" for="empresa">Organização:</label>
+                      <input type="email" class="form-control" name="Empresa" id="empresa"
+                        placeholder="Nome da Organização">
+                    </div>
+
+
+                    <div class="custom-control">
+                      <label class="text-secondary" for="name">Nome:</label>
+                      <input type="text" class="form-control" name="Nome" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="apelido">Apelido:</label>
+                      <input type="text" class="form-control" name="Apelido" id="apelido" placeholder="Nome"
+                        required>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="email">Email:</label>
+                      <input type="email" class="form-control" name="Email" id="email"
+                        placeholder="Email" required>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="contact">Contacto:</label>
+                      <input type="tel" class="form-control" name="Contacto" id="contact"
+                        placeholder="Contacto" required>
+                    </div>
+
+                    <div class="custom-control">
+                      <div class="  text-secondary help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+
+
+      </div>
     </div>
   </section>
 
@@ -125,17 +523,96 @@
 
 
 
+  <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include jQuery Validator plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+
+  <!-- Include SmartWizard JavaScript source -->
+  <script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+
+  <script type="text/javascript" src="src/js/site.js"></script>
 
 
 
 
-  <div class="jumbotron">
-    <h1 class="display-4">Orçamentos</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-secondary btn-lg" href="orcamento.html" role="button">Orçamentos</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="servicos" class="servicos text-center text-secondary">
+    <div class="container">
+      <div class="title">
+        <h3>Serviços</h3>
+        <p></p>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <i class="fas fa-signature"></i>
+          <h5>Pedido Sem Compromisso</h5>
+          <p>Faça o seu pedido de orçamento sem compromisso e adesão. Preencha um breve questionário explicando-nos
+            aquilo de que necessita.</p>
+        </div>
+        <div class="col-sm">
+          <i class="far fa-paper-plane"></i>
+          <h5>Rapidez e Eficiência</h5>
+          <p>Receba o seu orçamento com a maior Rapizez e Eficiência possivel. Tenha acesso ao seu orçamento em menos de
+            24 horas com o nosso serviço. </p>
+        </div>
+        <div class="col-sm">
+          <i class="fas fa-comment-dollar"></i>
+          <h5>Melhor Preço</h5>
+          <p>Orçamentos grátis e um trabalho ao melhor preço do mercado.</p>
+        </div>
+        <div class="col-sm">
+          <i class="fas fa-magic"></i>
+          <h5>Serviço Personalizado</h5>
+          <p>O segredo do nosso sucesso é o serviço personalizado e o constante desejo de exceder as expectativas dos
+            nossos clientes</p>
+        </div>
+      </div>
+
+
+    </div>
   </div>
+  </br>
 
 
 
@@ -144,449 +621,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section id="portfolio">
-
-    <div class="container gallery-container">
-
-      <h1>Bootstrap 3 Gallery</h1>
-
-      <p class="page-description text-center">Grid Layout With Zoom Effect</p>
-
-      <div class="tz-gallery">
-
-        <div class="row">
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Park">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Bridge">
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Tunnel">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Coast">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Rails">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Traffic">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Rocks">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Benches">
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <a class="lightbox" href="img/pic1.jpg">
-              <img src="img/pic1.jpg" alt="Sky">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-  <script>
-    baguetteBox.run('.tz-gallery');
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>About this page</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so
-            you can use it as a boilerplate or starting point for you own landing page designs! This template features:
-          </p>
-          <ul>
-            <li>Clickable nav links that smooth scroll to page sections</li>
-            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita
-            quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore
-            ut velit dignissimos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor,
-            provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
-            exercitationem, in, quo totam.</p>
-
-
-
-
-
-
-          <h3 class="mb-0">Contact</h3>
-
-
-          <form id="contact" class="form" role="form" autocomplete="off" action="https://formspree.io/mnqvardr" method="POST">
-            <fieldset>
-              <label for="name" class="mb-0">Name</label>
-              <div class="row mb-1">
-                <div class="col-lg-12">
-                  <input type="text" name="name" id="name" class="form-control" required="">
-                </div>
-              </div>
-              <label for="email" class="mb-0">Email</label>
-              <div class="row mb-1">
-                <div class="col-lg-12">
-                  <input type="text" name="email" id="email" class="form-control" required="">
-                </div>
-              </div>
-              <label for="message" class="mb-0">Message</label>
-              <div class="row mb-1">
-                <div class="col-lg-12">
-                  <textarea rows="6" name="message" id="message" class="form-control" required=""></textarea>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-secondary btn-lg float-right"  >Send
-                Message</button>
-
-            </fieldset>
-          </form>
-
-        </div>
-
-
-
-
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer class="footer-distributed">
-
-    <div class="footer-left">
-      <img src="img/pic1.jpg">
-      <h3>About<span>Eduonix</span></h3>
-
-      <p class="footer-links">
-        <a href="#">Home</a>
-        |
-        <a href="#">Blog</a>
-        |
-        <a href="#">About</a>
-        |
-        <a href="#">Contact</a>
-      </p>
-
-      <p class="footer-company-name">© 2019 Eduonix Learning Solutions Pvt. Ltd.</p>
-    </div>
-
-    <div class="footer-center">
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span>309 - Rupa Solitaire,
-            Bldg. No. A - 1, Sector - 1</span>
-          Mahape, Navi Mumbai - 400710</p>
-      </div>
-
-      <div>
-        <i class="fa fa-phone"></i>
-        <p>+91 22-27782183</p>
-      </div>
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
-      </div>
-    </div>
-    <div class="footer-right">
-      <p class="footer-company-about">
-        <span>About the company</span>
-        We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
-      <div class="footer-icons">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-      </div>
-    </div>
-  </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script type='text/javascript'>
-
-
-
-
-
-
-
-// "?cc=CCaddress@example.com" +
-    function sendMail() {
-      var link = "mailto:joaosilgo96@gmail.com" +
-       "?"
-        "&subject=" + escape("This is subject") +
-        "&body=" + escape("This is body");
-      window.location.href = link;
-    }
-
-
-
-
-
-
-    //1169275337340E6539900A44510214AC90B62313C7C7AAD1AEA45D97236EB112D4D7CF428FA1711FF51ED6364C2925F3
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "joaosilgo96@gmail.com",
-        Password: "C1EAD10789251AF5D7161A3990535C7FA5F1",
-        To: "joaosilgo96@gmail.com",
-        From: "joaosilgo96@gmail.com",
-        Subject: "Test email",
-        Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-      }).then(
-        message => alert(message)
-      );
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var map, contextMenu;
-
-    function GetMap() {
-      map = new Microsoft.Maps.Map('#myMap', {
-        //Hide the default navigation bar.
-        showDashboard: false
-
-      });
-      map.setView({
-        mapTypeId: Microsoft.Maps.MapTypeId.grayscale,
-        center: new Microsoft.Maps.Location(35.027222, -111.0225),
-        zoom: 15
-      });
-
-    }
-  </script>
-  <script type='text/javascript'
-    src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[At2tYNxlreBl2ie-6VW-uYioaT4VAiZwc0uOsHKHPH8qyZymKs4Q1h8dly40hPpF]'
-    async defer></script>
-  <style>
-    .mapContainer,
-    #myMap {
-      position: relative;
-      width: 600px;
-      height: 400px;
-    }
-
-    .customNavBar {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-  </style>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div id="myMap" class="col-xs-12 col-md-12 col-lg-12"></div>
-
-
-    </div>
-
-  </div>
 
 
 
 
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+
+
+      <p class="m-0 text-center text-white">Copyright &copy; Orçamentos Grátis 2020</p>
     </div>
-    <!-- /.container -->
+
   </footer>
 
 
@@ -638,375 +683,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <style>
-    .carousel-item {
-      height: 100vh;
-      min-height: 350px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-
-
-
-
-
-
-
-    section {
-      padding: 150px 0;
-    }
-
-
-
-
-    .container.gallery-container {
-      background-color: #fff;
-      color: #35373a;
-      min-height: 100vh;
-      border-radius: 20px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
-    }
-
-    .gallery-container h1 {
-      text-align: center;
-      margin-top: 70px;
-      font-family: 'Droid Sans', sans-serif;
-      font-weight: bold;
-    }
-
-    .gallery-container p.page-description {
-      text-align: center;
-      max-width: 800px;
-      margin: 25px auto;
-      color: #888;
-      font-size: 18px;
-    }
-
-    .tz-gallery {
-      padding: 40px;
-    }
-
-    .tz-gallery .lightbox img {
-      width: 100%;
-      margin-bottom: 30px;
-      transition: 0.2s ease-in-out;
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    }
-
-
-    .tz-gallery .lightbox img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .tz-gallery img {
-      border-radius: 4px;
-    }
-
-    .baguetteBox-button {
-      background-color: transparent !important;
-    }
-
-
-    @media(max-width: 768px) {
-      body {
-        padding: 0;
-      }
-
-      .container.gallery-container {
-        border-radius: 0;
-      }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    footer {
-      position: fixed;
-      bottom: 0;
-    }
-
-    @media (max-height:800px) {
-      footer {
-        position: static;
-      }
-
-
-    }
-
-
-    .footer-distributed {
-      background-color: #2c292f;
-      box-sizing: border-box;
-      width: 100%;
-      text-align: left;
-      font: bold 16px;
-      padding: 50px 50px 60px 50px;
-      margin-top: 80px;
-    }
-
-    .footer-distributed .footer-left,
-    .footer-distributed .footer-center,
-    .footer-distributed .footer-right {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    /* Footer left */
-
-    .footer-distributed .footer-left {
-      width: 30%;
-    }
-
-    .footer-distributed h3 {
-      color: #ffffff;
-      font: normal 36px;
-      margin: 0;
-    }
-
-    /* The company logo */
-
-    .footer-distributed .footer-left img {
-      width: 30%;
-    }
-
-    .footer-distributed h3 span {
-      color: #8f9296;
-    }
-
-    /* Footer links */
-
-    .footer-distributed .footer-links {
-      color: #ffffff;
-      margin: 20px 0 12px;
-    }
-
-    .footer-distributed .footer-links a {
-      display: inline-block;
-      line-height: 1.8;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .footer-distributed .footer-company-name {
-      color: #8f9296;
-      font-size: 14px;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    /* Footer Center */
-
-    .footer-distributed .footer-center {
-      width: 35%;
-    }
-
-
-    .footer-distributed .footer-center i {
-      background-color: #33383b;
-      color: #ffffff;
-      font-size: 25px;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 42px;
-      margin: 10px 15px;
-      vertical-align: middle;
-    }
-
-    .footer-distributed .footer-center i.fa-envelope {
-      font-size: 17px;
-      line-height: 38px;
-    }
-
-    .footer-distributed .footer-center p {
-      display: inline-block;
-      color: #ffffff;
-      vertical-align: middle;
-      margin: 0;
-    }
-
-    .footer-distributed .footer-center p span {
-      display: block;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .footer-distributed .footer-center p a {
-      color: #92999f;
-      text-decoration: none;
-      ;
-    }
-
-
-    /* Footer Right */
-
-    .footer-distributed .footer-right {
-      width: 30%;
-    }
-
-    .footer-distributed .footer-company-about {
-      line-height: 20px;
-      color: #92999f;
-      font-size: 13px;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    .footer-distributed .footer-company-about span {
-      display: block;
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .footer-distributed .footer-icons {
-      margin-top: 25px;
-    }
-
-    .footer-distributed .footer-icons a {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      cursor: pointer;
-      background-color: #33383b;
-      border-radius: 2px;
-
-      font-size: 20px;
-      color: #ffffff;
-      text-align: center;
-      line-height: 35px;
-
-      margin-right: 3px;
-      margin-bottom: 5px;
-    }
-
-    /* Here is the code for Responsive Footer */
-    /* You can remove below code if you don't want Footer to be responsive */
-
-
-    @media (max-width: 880px) {
-
-      .footer-distributed .footer-left,
-      .footer-distributed .footer-center,
-      .footer-distributed .footer-right {
-        display: block;
-        width: 100%;
-        margin-bottom: 40px;
-        text-align: center;
-      }
-
-      .footer-distributed .footer-center i {
-        margin-left: 0;
-      }
-    }
-  </style>
 
 
 

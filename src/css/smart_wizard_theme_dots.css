@@ -15,12 +15,14 @@
 }
 .sw-theme-dots .sw-container {
     min-height: 300px;
+    
 }
 .sw-theme-dots .step-content {
     padding: 10px 0;
     border: none;
-    background-color: #FFF;
+    background-color: #fff;
     text-align: left;
+    
 }
 .sw-theme-dots .sw-toolbar{
     background: #fff;
@@ -28,9 +30,13 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0 !important;
+    
+    
 }
 .sw-theme-dots .sw-toolbar-top{
     border-bottom-color: #ddd !important;
+    
+   
 }
 .sw-theme-dots .sw-toolbar-bottom{
     border-top-color: #ddd !important;
@@ -41,6 +47,7 @@
     background: #fff;
     border: 0px solid #ccc !important;
     list-style: none;
+   
 }
 .sw-theme-dots > ul.step-anchor:before {
     content: " ";
