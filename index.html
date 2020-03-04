@@ -15,9 +15,23 @@
   <link href="src/css/smart_wizard_theme_dots.css" rel="stylesheet" type="text/css" />
 
   <link href="src/css/site.css" rel="stylesheet" type="text/css" />
+
   <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
 
   <title>Orçamentos Grátis</title>
+
+
+  <script>
+    UPLOADCARE_PUBLIC_KEY = '6e27d744ca76f09193d1';
+    UPLOADCARE_LOCALE = 'pt';
+    UPLOADCARE_TABS = 'file';
+    UPLOADCARE_CLEARABLE = true;
+  </script>
+  
+  <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
+
+  <link rel="stylesheet" href="src/css/flexslider.css" type="text/css">
 </head>
 
 <body id="page-top">
@@ -53,10 +67,10 @@
       <p class="lead">Encontre aqui os melhores orçamentos gráficos. Trabalho personalizado e de qualidade superior ,
         com os melhores <a href="#servicos">Serviços</a>!</p>
 
-      <div class="container">
+      <div class="container text-secondary">
         <br />
         <form action="https://formspree.io/mjvwnpja" id="myForm" role="form" data-toggle="validator" method="post"
-          accept-charset="utf-8">
+          accept-charset="utf-8" enctype="multipart/form-data">
 
           <!-- SmartWizard html -->
           <div id="smartwizard">
@@ -103,11 +117,7 @@
                         value="4">
                       <label class="custom-control-label text-secondary" for="defaultUnchecked4">Livros</label>
                     </div>
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="defaultUnchecked5" name="Serviços"
-                        value="Livros">
-                      <label class="custom-control-label text-secondary" for="defaultUnchecked5">Livros</label>
-                    </div>
+                   
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="defaultUnchecked6" name="Serviços"
                         value="Revistas">
@@ -167,8 +177,8 @@
 
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="defaultUncheckedP1" name="Tipo de Papel"
-                        value="10R">
-                      <label class="custom-control-label text-secondary" for="defaultUncheckedP1">10R</label>
+                        value="IOR">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP1">IOR</label>
                     </div>
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="defaultUncheckedP2" name="Tipo de Papel"
@@ -182,8 +192,8 @@
                     </div>
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="defaultUncheckedP4" name="Tipo de Papel"
-                        value="Couché Sem Brilho">
-                      <label class="custom-control-label text-secondary" for="defaultUncheckedP4">Couché Sem
+                        value="Couché Semi Brilho">
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedP4">Couché Semi
                         Brilho</label>
                     </div>
                     <div class="custom-control custom-checkbox">
@@ -386,7 +396,7 @@
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="defaultUncheckedA12" name="Acabamentos"
                         value="Cozedura">
-                      <label class="custom-control-label text-secondary" for="defaultUncheckedA12">Cozedura</label>
+                      <label class="custom-control-label text-secondary" for="defaultUncheckedA12">Cosedura</label>
                     </div>
                     <div class="custom-control">
                       <label class="text-secondary" for="outro">Outro:</label>
@@ -425,8 +435,8 @@
 
 
               <div id="step-5">
-                <h3>Observações</h3>
-                <p class="lead">Observações</p>
+                <h3>Prazo de Entrega e Ficheiros</h3>
+                <p class="lead">Prazo de Entrega e Ficheiros</p>
                 <div id="form-step-4" role="form" data-toggle="validator">
                   <div class="form-group">
                     <!--  <label for="terms">I agree with the T&C</label>
@@ -438,6 +448,12 @@
                       <textarea class="form-control text-secondary" name="Observações" id="obse" rows="3"
                         placeholder="Observações..."></textarea>
 
+                    </div>
+
+                    <div class="custom-control">
+                      <p class="lead">Submeta os seus ficheiros</p>
+                      <label class="text-secondary" for="files">Ficheiros</label>
+                      <input type="hidden" id="files" role="uploadcare-uploader" data-multiple="true" data-multiple-min="1" />
                     </div>
 
                     </br>
@@ -475,31 +491,41 @@
                                         data-error="Please accept the Terms and Conditions" required> -->
                     <div class="custom-control">
                       <label class="text-secondary" for="empresa">Organização:</label>
-                      <input type="email" class="form-control" name="Empresa" id="empresa"
+                      <input type="text" class="form-control" name="Empresa" id="empresa"
                         placeholder="Nome da Organização">
                     </div>
 
+                    <div class="custom-control">
+                      <label class="text-secondary" for="nifempresa">Nif:</label>
+                      <input type="text" class="form-control" name="Nif Organização" id="nifempresa"
+                        placeholder="Nif da Organização">
+                    </div>
 
                     <div class="custom-control">
-                      <label class="text-secondary" for="name">Nome:</label>
+                      <label class="text-secondary" for="morada">Morada:</label>
+                      <input type="text" class="form-control" name="Morada" id="morada"
+                        placeholder="Morada">
+                    </div>
+                    
+                    <div class="custom-control">
+                      <label class="text-secondary" for="name">*Nome:</label>
                       <input type="text" class="form-control" name="Nome" id="name" placeholder="Nome" required>
                     </div>
                     <div class="custom-control">
-                      <label class="text-secondary" for="apelido">Apelido:</label>
-                      <input type="text" class="form-control" name="Apelido" id="apelido" placeholder="Nome"
+                      <label class="text-secondary" for="apelido">*Apelido:</label>
+                      <input type="text" class="form-control" name="Apelido" id="apelido" placeholder="Nome" required>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="email">*Email:</label>
+                      <input type="email" class="form-control" name="Email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="custom-control">
+                      <label class="text-secondary" for="contact">*Contacto:</label>
+                      <input type="tel" class="form-control" name="Contacto" id="contact" placeholder="Contacto"
                         required>
                     </div>
-                    <div class="custom-control">
-                      <label class="text-secondary" for="email">Email:</label>
-                      <input type="email" class="form-control" name="Email" id="email"
-                        placeholder="Email" required>
-                    </div>
-                    <div class="custom-control">
-                      <label class="text-secondary" for="contact">Contacto:</label>
-                      <input type="tel" class="form-control" name="Contacto" id="contact"
-                        placeholder="Contacto" required>
-                    </div>
 
+                    <p class="text-secondary"><small class="text-muted">*Campos de Preenchimento Obrigatório</small></p>
                     <div class="custom-control">
                       <div class="  text-secondary help-block with-errors"></div>
                     </div>
@@ -536,6 +562,7 @@
   <script type="text/javascript" src="src/js/site.js"></script>
 
 
+  <script src="src/js/jquery.flexslider-min.js"></script>
 
 
 
@@ -575,6 +602,8 @@
 
 
 
+
+  <section id="sevicos" class="py-5">
 
 
   <div id="servicos" class="servicos text-center text-secondary">
@@ -593,8 +622,7 @@
         <div class="col-sm">
           <i class="far fa-paper-plane"></i>
           <h5>Rapidez e Eficiência</h5>
-          <p>Receba o seu orçamento com a maior Rapizez e Eficiência possivel. Tenha acesso ao seu orçamento em menos de
-            24 horas com o nosso serviço. </p>
+          <p>Receba o seu orçamento com a maior Rapizez e Eficiência possivel. Tenha acesso ao seu orçamento num período de tempo reduzido com o nosso serviço. </p>
         </div>
         <div class="col-sm">
           <i class="fas fa-comment-dollar"></i>
@@ -612,7 +640,64 @@
 
     </div>
   </div>
+</section>
   </br>
+
+
+
+
+
+
+ <!-- spacer section:testimonial -->
+ <section id="testimonials" class="section"  >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="align-center">
+          <div class="flexslider testimonials-slider">
+            <ul class="slides text-center text-secondary">
+              <li>
+                <div class=" testimonial clearfix">
+                 
+                  <i class=" fa fa-quote-left"></i>
+                  <h5>
+                      Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                    </h5>
+                  <br/>
+                  <span class="author">&mdash; SARAH DOE <a href="#">www.siteurl.com</a></span>
+                </div>
+              </li>
+
+              <li>
+                <div class="testimonial clearfix">
+                
+                  <i class="fa fa-quote-left"></i>
+                  <h5>
+                      Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                      </h5>
+                  <br/>
+                  <span class="author">&mdash; NICOLE DOE <a href="#">www.siteurl.com</a></span>
+                </div>
+              </li>
+              <li>
+                <div class="testimonial clearfix">
+                  
+                  <i class="fa fa-quote-left "></i>
+                  <h5>
+                    Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                    </h5>
+                  <br/>
+                  <span class="author">&mdash; DASON KRUN <a href="#">www.siteurl.com</a></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 

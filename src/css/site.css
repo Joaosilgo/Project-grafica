@@ -1,5 +1,105 @@
 
 
+
+
+
+/* flexslider */
+.flex-control-paging li a {
+	background: #888;
+}
+
+
+.testimonial span.author a {
+	color: #888;
+}
+
+
+
+/*===========================
+  --- Flex Slider ----
+=========================== */
+
+section.featured {
+	background: #fff;
+}
+
+ /* inner heading */
+section.featured.inner {
+	background: #fff;
+	padding: 150px 0 50px;
+}
+
+
+/* --- Flexslider --- */
+.flexslider {
+	margin: 0;
+	background: 0;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.flex-control-paging li a {
+	width: 8px;
+	height: 8px;
+}
+
+.flex-control-paging li a.flex-active {
+	background: #888;
+}
+
+.flex-control-nav {
+	bottom: -25px;
+}
+
+.flexslider .slides img {
+	width: auto;
+	display: inline;
+}
+
+.flex-direction-nav a {
+	display: block;
+	width: 50px;
+	height: 98px;
+	margin: -29px -20px 0;
+	position: absolute;
+	top: 30%;
+	z-index: 10;
+	overflow: hidden;
+	opacity: 0;
+	cursor: pointer;
+	color: #888;
+	
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+.flex-direction-nav .flex-next {
+	right: -70px;
+	background: url(../img/arrow_large_right.png) no-repeat top left;
+}
+
+.flex-direction-nav .flex-prev {
+	left: -70px;
+	background: url(../img/arrow_large_left.png) no-repeat top left;
+}
+
+.flex-direction-nav a.flex-next:before {
+	content: none !important;
+}
+
+/* removing default arrows */
+.flex-direction-nav a:before {
+	content: none !important;
+}
+
+
+
+
+
+
     section {
         padding: 150px 0;
       }
