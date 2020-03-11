@@ -1,0 +1,60 @@
+body {
+    color: #666;
+    background-color: #efefef
+}
+
+
+
+
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  
+
+
+
+
+.content-lift {
+    background-color: #fff;
+    padding: 45px;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: -280px !important;
+    margin-bottom: 30px
+}
+
+.site-content {
+    margin-top: 95px
+}
+
+
+.entry-content {
+    margin-top: 1em
+}
+
+p {
+    line-height: 1.50em;
+    margin-bottom: 2em
+}
+.welcome {
+    color: #fff;
+    font-weight: 400;
+    padding: 150px 0 350px 0;
+    background: gainsboro;
+   /* background: -o-linear-gradient(315deg, #efefef 0%, #666 100%);
+    background: linear-gradient(135deg, #efefef 0%, #666 100%);*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#666', GradientType=1)
+}
+

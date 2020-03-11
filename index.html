@@ -31,6 +31,8 @@
   <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
 
 
+
+ 
   <link rel="stylesheet" href="src/css/flexslider.css" type="text/css">
 </head>
 
@@ -50,7 +52,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
@@ -61,16 +63,18 @@
 
   <script src="https://kit.fontawesome.com/f13bd2d1fd.js" crossorigin="anonymous"></script>
 
+
+
   <section id="orcamento" class="py-5">
-    <div class="container">
+    <div class="container ">
       <h1 class="display-4">Orçamentos Grátis</h1>
       <p class="lead">Encontre aqui os melhores orçamentos gráficos. Trabalho personalizado e de qualidade superior ,
         com os melhores <a href="#servicos">Serviços</a>!</p>
 
-      <div class="container text-secondary">
+      <div class="  container text-secondary">
         <br />
         <form action="https://formsubmit.co/joaosilgo96@gmail.com" id="myForm" role="form" data-toggle="validator" method="post"
-          accept-charset="utf-8" enctype="multipart/form-data">
+          accept-charset="utf-8" enctype="multipart/form-data" >
 
           <!-- SmartWizard html -->
           <div id="smartwizard">
@@ -453,8 +457,7 @@
                     <div class="custom-control">
                       <p class="lead">Submeta os seus ficheiros</p>
                       <label class="text-secondary" for="files">Ficheiros</label>
-                     <!--  <input type="hidden" id="files" role="uploadcare-uploader" data-multiple="true" data-multiple-min="1" /> -->
-                      <input type="file" name="attachment" accept="image/png, image/jpeg">
+                      <input type="hidden" id="files" role="uploadcare-uploader" data-multiple="true" data-multiple-min="1" />
                     </div>
 
                     </br>
@@ -525,13 +528,21 @@
                       <input type="tel" class="form-control" name="Contacto" id="contact" placeholder="Contacto"
                         required>
                     </div>
-                    
-                     <div class="form-group">
-                      <input type="hidden" name="_autoresponse" value="Thak you motherfucker">
-                       <input type="hidden" name="_template" value="box">
-                       <input type="hidden" name="_captcha" value="false">
+                    <label class="text-secondary">Termos de Serviço:</label>
+                    <div class="custom-control custom-checkbox">
+                     
+                      <input type="checkbox" class="custom-control-input" id="terms" name="Termos"
+                        value="Termos" required>
+                      <label class="custom-control-label text-secondary" for="terms"><small>*Li e concordo com os <a href="termos&condicoes.html" target="target="_blank"">Termos e Serviços </a></small></label>
+                    </div>
+                    <div class="form-group">
+                      <input type="hidden" name="_autoresponse" value="Obrigado Por nos Contactar e por ter Escolhido os nossos serviços. Entraremos em Contacto Brevemente">
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_template" value="box">
+                      <input type="hidden" name="_next" value="/submit.html">
+                      <input type="hidden" name="_subject" value="Orçamentos Gráficos">
+                      <input type="hidden" name="_replyto">
                       </div>
-
                     <p class="text-secondary"><small class="text-muted">*Campos de Preenchimento Obrigatório</small></p>
                     <div class="custom-control">
                       <div class="  text-secondary help-block with-errors"></div>

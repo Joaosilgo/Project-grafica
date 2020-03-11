@@ -15,6 +15,7 @@ $(document).ready(function () {
     // Toolbar extra buttons
     var btnFinish = $('<button></button>').text('Enviar')
       .addClass('btn btn-outline-info btn-sm')
+      
 
       .on('click', function () {
         if (!$(this).hasClass('disabled')) {
