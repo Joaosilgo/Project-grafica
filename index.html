@@ -66,6 +66,12 @@
 
 
 
+
+
+
+
+
+
   <section id="orcamento" class="py-5">
     <div class="container ">
       <h1 class="display-4">Orçamentos Grátis</h1>
@@ -314,10 +320,9 @@
                   </div>
                   </br>
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="defaultUncheckedPC2" name="Preto &
-                      Branco" value="Sim">
-                    <label class="custom-control-label text-secondary" for="defaultUncheckedPC2">Preto &
-                      Branco</label>
+                    <input type="checkbox" class="custom-control-input" id="defaultUncheckedPC2" name="Preto & Branco"
+                      value="Sim">
+                    <label class="custom-control-label text-secondary" for="defaultUncheckedPC2">Preto & Branco</label>
                   </div>
                   </br>
                   <div class="custom-control">
@@ -464,7 +469,7 @@
                     </div>-->
 
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
                         <span class="input-group-text">Upload</span>
@@ -476,24 +481,62 @@
                         <label class="custom-file-label" for="inputGroupFile01">Escolha um Ficheiro</label>
                       </div>
                     </div>
+                  </div> -->
+                  <div class="form-div">
+                    <label for="file" class="input-label">
+                      <i class="fa fa-upload"> </i>
+                      <span id="label-span">Escolha Ficheiros </span>
+                    </label>
+                    <input id="file" type="file" multiple="true" name="attachment" accept="image/png, image/jpeg" />
                   </div>
 
-                  <!-- <label for="file" class="input-label">Escolha Ficheiros</label<input id="file" type="file" />
+                  <style>
+                    .form-div {
+                      margin-top: 50px;
+                      align-content: center;
+                      text-align: center;
+                    }
 
+                    .input-label {
+                      background: gray;
+                      color: #fff;
+                      padding: 20px;
+                      transition: 0.3s;
+                    }
 
-                    <style>
-                      .input-label {
-                        background: gray;
-                        color: #fff;
-                        padding: 30px;
-                      }
+                    .input-label:hover {
+                      background: grey;
+                      cursor: pointer;
 
-                      #file {
-                        display: none;
-                      }
-                    </style>
+                    }
 
-                  -->
+                    .fa {
+                      margin-right: 10px;
+                    }
+
+                    #file {
+                      display: none;
+                    }
+                  </style>
+
+                  <script>
+
+                    $(document).ready(function () {
+
+                      $("#file").on("change", function (e) {
+
+                        var files = $(this)[0].files;
+                        if (files.length >= 2) {
+                          $("#label-span").text(files.length + " files ready to upload");
+                        }
+                        else {
+                          var filename = e.target.value.split('\\').pop();
+                          $("#label-span").text(filename);
+                        }
+                      });
+                    });
+                  </script>
+
                   </br>
                   <div class="form-group">
                     <label class="text-secondary col-sm-4" for="prazoentrega">Prazo de Entrega</label>
@@ -564,7 +607,7 @@
                   <label class="text-secondary">Termos de Serviço:</label>
                   <div class="custom-control custom-checkbox">
 
-                    <input type="checkbox" class="custom-control-input" id="terms" name="Termos" value="Termos"
+                    <input type="checkbox" class="custom-control-input" id="terms" name="Termos" value="Aceito"
                       required>
                     <label class="custom-control-label text-secondary" for="terms"><small>*Li e concordo com os <a
                           href="termos&condicoes.html" target="target=" _blank"">Termos e Serviços
