@@ -24,10 +24,10 @@ $(document).ready(function () {
             elmForm.validator('validate');
             var elmErr = elmForm.find('.has-error');
             if (elmErr && elmErr.length > 0) {
-              alert('Oops we still have error in the form');
+              alert('Ops, existe erros no formulário');
               return false;
             } else {
-              alert('Great! we are ready to submit form');
+              alert('Ótimo! Estamos prontos para submeter o formulário');
               elmForm.submit();
               return false;
             }
