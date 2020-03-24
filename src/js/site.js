@@ -2,6 +2,86 @@
 
 
 
+  $(document).ready(function () {
+
+    $("#file").on("change", function (e) {
+
+      var files = $(this)[0].files;
+      if (files.length >= 2) {
+        $("#label-span").text(files.length + " files ready to upload");
+      }
+      else if (files.length == 0)
+      
+{
+  $("#label-span").text(" Escolha Ficheiros");
+}
+         
+       
+      else {
+        var filename = e.target.value.split('\\').pop();
+        $("#label-span").text(filename);
+      }
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 56)
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

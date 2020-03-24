@@ -76,15 +76,15 @@
     <div class="container ">
       <h1 class="display-4">Orçamentos Grátis</h1>
       <p class="lead">Encontre aqui os melhores orçamentos gráficos. Trabalho personalizado e de qualidade superior ,
-        com os melhores <a href="#servicos">Serviços</a>!</p>
+        com os melhores <a class="js-scroll-trigger" href="#servicos">Serviços</a>!</p>
 
       <div class="container text-secondary">
         <br />
-        <form action="https://formsubmit.co/joaosilgo96@gmail.com" id="myForm" role="form" data-toggle="validator"
+        <form action="https://formsubmit.co/orcamentosgraficos2020@gmail.com" id="myForm" role="form" data-toggle="validator"
           method="post" accept-charset="utf-8" enctype="multipart/form-data">
 
           <!-- SmartWizard html -->
-          <div id="smartwizard">
+          <div id="smartwizard" >
             <ul>
               <li><a href="#step-1">Step 1<br /><small>Serviços</small></a></li>
               <li><a href="#step-2">Step 2<br /><small>Papel</small></a></li>
@@ -160,10 +160,11 @@
                     <label class="custom-control-label text-secondary" for="defaultUnchecked11">Etiquetas</label>
                   </div>
                   <div class="custom-control">
+                   
                     <label class="text-secondary" for="soutro">Outro:</label>
-
                     <input type="text" class="form-control form-control-sm" name="Serviço Outro" id="soutro"
-                      placeholder="Outro...">
+                    placeholder="Outro...">
+                   
                   </div>
 
 
@@ -485,9 +486,9 @@
                   <div class="form-div">
                     <label for="file" class="input-label">
                       <i class="fa fa-upload"> </i>
-                      <span id="label-span">Escolha Ficheiros </span>
+                      <span id="label-span"> Escolha Ficheiros </span>
                     </label>
-                    <input id="file" type="file" multiple="true" name="attachment" accept="image/png, image/jpeg" />
+                    <input id="file" type="file" data-multiple="true" data-multiple-min="1" name="attachment" accept="image/png, image/jpeg" multiple>
                   </div>
 
                   <style>
@@ -519,23 +520,7 @@
                     }
                   </style>
 
-                  <script>
-
-                    $(document).ready(function () {
-
-                      $("#file").on("change", function (e) {
-
-                        var files = $(this)[0].files;
-                        if (files.length >= 2) {
-                          $("#label-span").text(files.length + " files ready to upload");
-                        }
-                        else {
-                          var filename = e.target.value.split('\\').pop();
-                          $("#label-span").text(filename);
-                        }
-                      });
-                    });
-                  </script>
+                  
 
                   </br>
                   <div class="form-group">
@@ -646,26 +631,6 @@
 
 
 
-  <!-- Include jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!-- Include jQuery Validator plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
-
-
-
-  <!-- Include SmartWizard JavaScript source -->
-  <script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
-
-  <script type="text/javascript" src="src/js/site.js"></script>
-
-
-  <script src="src/js/jquery.flexslider-min.js"></script>
-
-
-
-
-
-
 
 
 
@@ -762,7 +727,10 @@
                       O trabalho que solicitei à Orçamentos Gráficos ficou exatamente como eu queria e necessitava.
                       Recomendo vivamente o vosso trabalho, estou mais que satisfeito com o mesmo! Obrigado!
                     </h5>
+                   
                     <br />
+                    <img class="center" src="img/O Lagarteiro-cores.png" alt="Avatar" style="width:90px">
+
                     <span class="author">&mdash; O LAGARTEIRO</span>
                   </div>
                 </li>
@@ -777,6 +745,7 @@
 
                     </h5>
                     <br />
+                    <img class="center" src="img/Logo_vetor_oquintalinho-02.png" alt="Avatar" style="width:90px">
                     <span class="author">&mdash; O QUINTALINHO </span>
                   </div>
                 </li>
@@ -789,6 +758,7 @@
                       apertado!
                     </h5>
                     <br />
+                    <img class="center" src="img/Logotipo_JVC_cores-01.jpg-01.png" alt="Avatar" style="width:90px">
                     <span class="author">&mdash; JVC </span>
                   </div>
                 </li>
@@ -802,6 +772,7 @@
                       trabalho
                     </h5>
                     <br />
+                    <img class="center" src="img/Logo_Enchidos_do_Portugal_CORES-01.png" alt="Avatar" style="width:90px">
                     <span class="author">&mdash; ENCHIDOS DO PORTUGAL </span>
                   </div>
                 </li>
@@ -924,6 +895,27 @@
 
 
 
+
+
+
+
+  <!-- Include jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include jQuery Validator plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+
+  <!-- Include SmartWizard JavaScript source -->
+  <script type="text/javascript" src="src/js/jquery.smartWizard.js"></script>
+
+  <script type="text/javascript" src="src/js/site.js"></script>
+
+
+  <script src="src/js/jquery.flexslider-min.js"></script>
+
+ <!-- Plugin JavaScript -->
+ <script src="src/js/jquery-easing/jquery.easing.min.js"></script>
 
 
 
