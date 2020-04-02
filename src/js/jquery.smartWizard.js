@@ -23,12 +23,12 @@
         useURLhash: true, // Enable selection of the step based on url hash
         showStepURLhash: true, // Show url hash based on step
         lang: { // Language variables for button
-            next: 'Next',
-            previous: 'Previous'
+            next: 'Seguinte',
+            previous: 'Anterior'
         },
         toolbarSettings: {
             toolbarPosition: 'bottom', // none, top, bottom, both
-            toolbarButtonPosition: 'end', // start, end
+            toolbarButtonPosition: 'start', // start, end
             showNextButton: true, // show/hide a Next button
             showPreviousButton: true, // show/hide a Previous button
             toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
@@ -48,8 +48,8 @@
         errorSteps: [], // Highlight step with errors
         hiddenSteps: [], // Hidden steps
         theme: 'default', // theme for the wizard, related css need to include for other than default theme
-        transitionEffect: 'none', // Effect on navigation, none/slide/fade
-        transitionSpeed: '400'
+        transitionEffect: 'fade', // Effect on navigation, none/slide/fade
+        transitionSpeed: '250'
     };
 
     // The plugin constructor
@@ -177,7 +177,7 @@
             // Append toolbar based on the position
             switch (this.options.toolbarSettings.toolbarPosition) {
                 case 'top':
-                    toolbarTop = $('<div></div>').addClass('btn-toolbar sw-toolbar sw-toolbar-top justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
+                    toolbarTop = $('<div></div>').addClass(' btn-toolbar sw-toolbar sw-toolbar-top justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
                     toolbarTop.append(btnGroup);
                     if (this.options.toolbarSettings.toolbarButtonPosition === 'start') {
                         toolbarTop.prepend(btnGroupExtra);
@@ -187,7 +187,7 @@
                     this.container.before(toolbarTop);
                     break;
                 case 'bottom':
-                    toolbarBottom = $('<div></div>').addClass('btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
+                    toolbarBottom = $('<div class="d-flex justify-content-center"></div>').addClass('  btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
                     toolbarBottom.append(btnGroup);
                     if (this.options.toolbarSettings.toolbarButtonPosition === 'start') {
                         toolbarBottom.prepend(btnGroupExtra);
@@ -197,7 +197,7 @@
                     this.container.after(toolbarBottom);
                     break;
                 case 'both':
-                    toolbarTop = $('<div></div>').addClass('btn-toolbar sw-toolbar sw-toolbar-top justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
+                    toolbarTop = $('<div ></div>').addClass(' btn-toolbar sw-toolbar sw-toolbar-top justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
                     toolbarTop.append(btnGroup);
                     if (this.options.toolbarSettings.toolbarButtonPosition === 'start') {
                         toolbarTop.prepend(btnGroupExtra);
@@ -206,7 +206,7 @@
                     }
                     this.container.before(toolbarTop);
 
-                    toolbarBottom = $('<div></div>').addClass('btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
+                    toolbarBottom = $('<div ></div>').addClass(' btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-' + this.options.toolbarSettings.toolbarButtonPosition);
                     toolbarBottom.append(btnGroup.clone(true));
 
                     if (btnGroupExtra !== null) {

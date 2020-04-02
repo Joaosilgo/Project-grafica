@@ -2,6 +2,34 @@
 
 
 
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.getElementsByClassName('needs-validation');
+  // Loop over them and prevent submission
+  var validation = Array.prototype.filter.call(forms, function(form) {
+  form.addEventListener('submit', function(event) {
+  if (form.checkValidity() === false) {
+  event.preventDefault();
+  event.stopPropagation();
+  }
+  form.classList.add('was-validated');
+  }, false);
+  });
+  }, false);
+  })();
+
+
+
+
+
+
+
+
+
+
   $(document).ready(function () {
 
     $("#file").on("change", function (e) {
@@ -102,11 +130,20 @@ $(document).ready(function () {
           var elmForm = $("#myForm");
           if (elmForm) {
             elmForm.validator('validate');
+           // var name = elmForm.getElementById('name').value;
+            //var apelido = elmForm.getElementById('apelido').value;
+            //var mail = elmForm.getElementById('mail').value;
+            //var contact = elmForm.getElementById('contact').value;
+            
             var elmErr = elmForm.find('.has-error');
             if (elmErr && elmErr.length > 0) {
+            
               alert('Ops, existe erros no formulário');
               return false;
-            } else {
+            } 
+           
+            else 
+            {
               alert('Ótimo! Estamos prontos para submeter o formulário');
               elmForm.submit();
               return false;
