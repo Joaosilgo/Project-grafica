@@ -1,9 +1,11 @@
 
 
-
-
-
-
+/*
+h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+*/
+#orcamento{
+  color: #fff;
+}
 
   img {
     display: block;
@@ -175,7 +177,7 @@ section.featured.inner {
         background-color: transparent !important;
       }
   body{
-   
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     -webkit-user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
@@ -185,9 +187,9 @@ user-select: none;
   }
 
   .bg-img {
-    background-image:  url("../../img/Logo_orcamentosgraficos-01.png") ;
-    background-image: linear-gradient(to bottom ,rgba(0 , 0 , 0 , 0 ) 0%, rgba(0 , 0 , 0 , 0 ) 100%),url("../../img/Logo_orcamentosgraficos-01.png") ;
-   /* height: 500px; 
+    background-image:  url("../../img/offset-printing-3562696_1280\ \(2\).jpg") ;
+    /* background-image: linear-gradient(to bottom ,rgba(0 , 0 , 0 , 0 ) 0%, rgba(0 , 0 , 0 , 0 ) 100%),url("../../img/Logo_orcamentosgraficos-01.png") ;
+    height: 500px; 
    opacity: 0.5;*/
    
    background-color: transparent ;
@@ -208,6 +210,14 @@ user-select: none;
           border-radius: 0;
         }
       }
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
