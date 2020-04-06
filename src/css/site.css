@@ -1,3 +1,183 @@
+/* 
+The container box is relative so we can position stuff inside of it 
+*/
+.image-box {
+  position: relative;
+}
+
+/*
+The background and overlay need to be absolutely positioned
+*/
+.image-box__background,
+.image-box__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 
+The background image div sizes and positions the background itself.
+It's also at the bottom-most position in our "div stack" (z-index 1)
+
+We set the image url via a CSS custom property, that's set via the style attribute in our HTML
+*/
+.image-box__background {
+  background: url("../../img/offset-printing-3562696_1280\ \(2\).jpg") center center no-repeat;
+  background-size: cover;
+
+  z-index: 1
+}
+
+/* 
+The overlay div is just a colored element with some opacity.
+It's above the background image in our stack, so it appears to 
+darken the image 
+*/
+.image-box__overlay {
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 2;
+}
+
+/* 
+The content div is at the top of our stack. 
+We'd probably add some padding or flexbox properties here as well, 
+to place the content appropriately
+*/
+.image-box__content {
+  position: relative;
+
+  z-index: 3;
+
+  /* Finally, style and place the content */
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.footer-top {
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+
+.footer-top h3 {
+  padding-bottom: 10px;
+}
+
+.footer-contact p {
+  word-wrap: break-word;
+  border: 0;
+  border-bottom: 0px transparent;
+}
+
+.footer-contact i {
+  padding-right: 10px;
+  font-size: 18px;
+  color: #fff;
+  border: 0;
+  border-bottom: 0px transparent;
+}
+
+.footer-contact p a {
+  
+  color: #fff;
+  border: 0;
+  border-bottom: 0px transparent;
+}
+
+.footer-contact p a:hover,
+.footer-contact p a:focus {
+  border: 0px;
+  border-bottom: 0px transparent;
+}
+
+.footer-links a {
+  color: #fff;
+  border: 0;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #888;
+  margin-left: 3px;
+}
+
+.footer-bottom {
+  padding: 0 0 60px 0;
+}
+
+.footer-social a {
+  margin: 0 5px;
+  color: #bbb;
+  border: 0;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #555;
+  border: 0;
+}
+
+.footer-social i {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+
+  .footer-top {
+      padding: 40px 0 20px 0;
+  }
+
+  .footer-bottom {
+      padding: 0 0 40px 0;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .footer-top {
+      padding: 40px 0 20px 0;
+  }
+
+  .footer-bottom {
+      padding: 0 0 40px 0;
+  }
+
+  .footer-contact i {
+      padding-right: 5px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+
+  .footer-top {
+      padding: 40px 0 20px 0;
+      text-align: center;
+  }
+
+  .footer-bottom {
+      padding: 0 0 40px 0;
+  }
+
+  .footer-contact i {
+      padding-right: 5px;
+  }
+
+}
 
 
 /*
