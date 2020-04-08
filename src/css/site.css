@@ -36,7 +36,7 @@ It's above the background image in our stack, so it appears to
 darken the image 
 */
 .image-box__overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.25);
 
   z-index: 2;
 }
@@ -185,6 +185,7 @@ h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24p
 */
 #orcamento{
   color: #fff;
+	 font-size:  medium;
 }
 
   img {
