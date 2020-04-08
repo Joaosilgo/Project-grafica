@@ -509,7 +509,7 @@
                     </label>
                     <input id="file" type="file" data-multiple="true" data-multiple-min="1" name="attachment" multiple>
                     
-                    <div  id="file-list-display"></div>
+                    
 
                   </div>
                   <small class="  text-white">
@@ -1027,55 +1027,6 @@
 
 
 
-
-
-<script>
-  
-  (function () {
-    var fileCatcher = document.getElementById('myForm');
-    var fileInput = document.getElementById('file');
-    var fileListDisplay = document.getElementById('file-list-display');
-
-    var fileList = [];
-    var renderFileList, sendFile;
-
-    fileCatcher.addEventListener('submit', function (evnt) {
-      evnt.preventDefault();
-      fileList.forEach(function (file) {
-        sendFile(file);
-      });
-    });
-
-    fileInput.addEventListener('change', function (evnt) {
-      fileList = [];
-      for (var i = 0; i < fileInput.files.length; i++) {
-        fileList.push(fileInput.files[i]);
-      }
-      renderFileList();
-    });
-
-    renderFileList = function () {
-      fileListDisplay.innerHTML = '';
-      fileList.forEach(function (file, index) {
-        var fileDisplayEl = document.createElement('p');
-        
-        fileDisplayEl.innerHTML = (index + 1) + ': ' + file.name;
-        fileListDisplay.appendChild(fileDisplayEl);
-      });
-    };
-
-    sendFile = function (file) {
-      var formData = new FormData();
-      var request = new XMLHttpRequest();
-
-      formData.set('file', file);
-      request.open("POST", 'https://formsubmit.co/orcamentosgraficos2020@gmail.com');
-      request.send(formData);
-    };
-  })();
-
-
-</script>
 
 
 
