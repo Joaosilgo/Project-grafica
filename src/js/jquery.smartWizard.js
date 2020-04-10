@@ -23,8 +23,8 @@
         useURLhash: true, // Enable selection of the step based on url hash
         showStepURLhash: true, // Show url hash based on step
         lang: { // Language variables for button
-            next: 'Seguinte',
-            previous: 'Anterior'
+            next: 'Seguinte ',
+            previous: 'Anterior '
         },
         toolbarSettings: {
             toolbarPosition: 'bottom', // none, top, bottom, both
@@ -158,10 +158,14 @@
                 return true;
             }
 
-            // Create the toolbar buttons
+             // Create the toolbar buttons
             var btnNext = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.next).addClass('btn btn-secondary sw-btn-next').attr('type', 'button') : null;
+            btnNext.append('<i class="fas fa-step-forward"></i>');
             var btnPrevious = this.options.toolbarSettings.showPreviousButton !== false ? $('<button></button>').text(this.options.lang.previous).addClass('btn btn-secondary sw-btn-prev').attr('type', 'button') : null;
-            var btnGroup = $('<div></div>').addClass('btn-group mr-2 sw-btn-group').attr('role', 'group').append(btnPrevious, btnNext);
+            btnPrevious.append('<i class="fas fa-undo-alt"></i>');
+  
+            
+            var btnGroup = $('<div></div>').addClass('btn-group btn-group-sm mr-2 sw-btn-group').attr('role', 'group').append(btnPrevious, btnNext);
 
             // Add extra toolbar buttons
             var btnGroupExtra = null;
