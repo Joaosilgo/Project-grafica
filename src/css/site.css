@@ -1,64 +1,37 @@
-/* 
-The container box is relative so we can position stuff inside of it 
-*/
-.image-box {
-  position: relative;
+body{  
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+font-size:  medium;
 }
 
-/*
-The background and overlay need to be absolutely positioned
-*/
-.image-box__background,
-.image-box__overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+#refServicos{
+  color: #fff;
+  font-weight: bold;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* 
-The background image div sizes and positions the background itself.
-It's also at the bottom-most position in our "div stack" (z-index 1)
 
-We set the image url via a CSS custom property, that's set via the style attribute in our HTML
-*/
-.image-box__background {
-  background: url("../../img/offset-printing-3562696_1280\ \(2\).jpg") center center no-repeat;
-  background-size: cover;
-
-  z-index: 1
-}
-
-/* 
-The overlay div is just a colored element with some opacity.
-It's above the background image in our stack, so it appears to 
-darken the image 
-*/
-.image-box__overlay {
-  background: rgba(0, 0, 0, 0.25);
-
-  z-index: 2;
-}
-
-/* 
-The content div is at the top of our stack. 
-We'd probably add some padding or flexbox properties here as well, 
-to place the content appropriately
-*/
-.image-box__content {
-  position: relative;
-
-  z-index: 3;
-
-  /* Finally, style and place the content */
+#orcamento{
   color: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+section {
+  padding: 150px 0;
 }
 
+
+.servicos
+{
+ padding: 60px 0;
+}
 
 .footer-top {
   padding: 60px 0 40px 0;
@@ -84,7 +57,6 @@ to place the content appropriately
 }
 
 .footer-contact p a {
-  
   color: #fff;
   border: 0;
   border-bottom: 0px transparent;
@@ -127,6 +99,107 @@ to place the content appropriately
   font-size: 24px;
   vertical-align: middle;
 }
+
+
+  
+
+
+
+.form-div {
+  margin-top: 50px;
+  align-content: center;
+  text-align: center;
+}
+
+.input-label {
+  background: gray;
+  color: #fff;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.input-label:hover {
+  background: grey;
+  cursor: pointer;
+
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+#file {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* 
+The container box is relative so we can position stuff inside of it 
+*/
+
+.image-box {
+  position: relative;
+}
+
+/*
+The background and overlay need to be absolutely positioned
+*/
+.image-box__background,
+.image-box__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 
+The background image div sizes and positions the background itself.
+It's also at the bottom-most position in our "div stack" (z-index 1)
+
+We set the image url via a CSS custom property, that's set via the style attribute in our HTML
+*/
+.image-box__background {
+  background: url("../../img/back.jpg") center center no-repeat;
+  background-size: cover;
+  z-index: 1
+}
+
+/* 
+The overlay div is just a colored element with some opacity.
+It's above the background image in our stack, so it appears to 
+darken the image 
+*/
+.image-box__overlay {
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+/* 
+The content div is at the top of our stack. 
+We'd probably add some padding or flexbox properties here as well, 
+to place the content appropriately
+*/
+.image-box__content {
+  position: relative;
+  z-index: 3;
+  /* Finally, style and place the content */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+ 
+
 
 
 
@@ -178,22 +251,6 @@ to place the content appropriately
   }
 
 }
-
-
-/*
-h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
-*/
-#orcamento{
-  color: #fff;
-	 font-size:  medium;
-}
-
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
 
 
 
@@ -269,8 +326,6 @@ section.featured.inner {
 	-moz-transition: all .3s ease;
 	transition: all .3s ease;
 }
-
-
 .flex-direction-nav .flex-next {
 	right: -70px;
 	background: url(../img/arrow_large_right.png) no-repeat top left;
@@ -295,90 +350,19 @@ section.featured.inner {
 
 
 
-    section {
-        padding: 150px 0;
-      }
+  
 
 
 
-      .servicos
-      {
-        padding: 60px 0;
-        
-      }
-  
-  
-  
-  
-      .container.gallery-container {
-        background-color: #fff;
-        color: #35373a;
-        min-height: 100vh;
-        border-radius: 20px;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
-      }
-  
-      .gallery-container h1 {
-        text-align: center;
-        margin-top: 70px;
-        font-family: 'Droid Sans', sans-serif;
-        font-weight: bold;
-      }
-  
-      .gallery-container p.page-description {
-        text-align: center;
-        max-width: 800px;
-        margin: 25px auto;
-        color: #888;
-        font-size: 18px;
-      }
-  
-      .tz-gallery {
-        padding: 40px;
-      }
-  
-      .tz-gallery .lightbox img {
-        width: 100%;
-        margin-bottom: 30px;
-        transition: 0.2s ease-in-out;
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-      }
-  
-  
-      .tz-gallery .lightbox img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-      }
-  
-      .tz-gallery img {
-        border-radius: 4px;
-      }
-  
-      .baguetteBox-button {
-        background-color: transparent !important;
-      }
-  body{
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-  }
 
-  .bg-img {
-    background-image:  url("../../img/offset-printing-3562696_1280\ \(2\).jpg") ;
-    /* background-image: linear-gradient(to bottom ,rgba(0 , 0 , 0 , 0 ) 0%, rgba(0 , 0 , 0 , 0 ) 100%),url("../../img/Logo_orcamentosgraficos-01.png") ;
-    height: 500px; 
-   opacity: 0.5;*/
-   
-   background-color: transparent ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
+
+  
+  
+    
+  
+  
+
+ 
 
 
       @media(max-width: 768px) {
@@ -387,26 +371,87 @@ user-select: none;
     
         }
   
-        .container.gallery-container {
-          border-radius: 0;
-        }
+       
       }
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
   
   
   
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
   
+
   
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
   
+ h5,h3{
+   text-align: center;
+ }
+ 
   
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
+  h5,h3{
+    text-align: center;
+  }
   
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
   
+  h5,h3{
+    text-align: center;
+  }
   
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
   
+  h5,h3{
+    text-align: center;
+  }
   
-  
-  
-  
+}
+
+   
   
   
   
