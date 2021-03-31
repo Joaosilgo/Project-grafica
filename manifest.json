@@ -29,8 +29,8 @@
       
     ],
   
-    "scope":"/Project-grafica/",
-   "start_url": "/Project-grafica/?source=pwa",
+    "scope":"/",
+   "start_url": "/?source=pwa",
     "background_color": "#C0C0C0",
     "display": "fullscreen",
     "theme_color": "#C0C0C0",
@@ -39,7 +39,7 @@
         "name": "Orçamentos • Gráficos",
         "short_name": "Orçamentos • Gráficos",
         "description": "Orçamentos • Gráficos",
-        "url": "/Project-grafica/?utm_source=homescreen",
+        "url": "/?utm_source=homescreen",
         "icons": [
           {
             "src": "img/Logo_orcamentosgraficos-01.png",
