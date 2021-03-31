@@ -5,51 +5,49 @@
     "lang": "pt",
     "orientation": "any",
     "categories": [
-      "budget",
-      "design",
-      "graphic"
+        "budget",
+        "design",
+        "graphic"
     ],
     "icons": [
-      {
-        "src": "img/Logo_orcamentosgraficos-01.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      },
-      {
-        "src": "img/Logo_orcamentosgraficos-01.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "img/Logo_orcamentosgraficos-01.png",
-        "sizes": "196x196",
-        "type": "image/png",
-        "purpose": "any maskable"
-      }
-      
+        {
+            "src": "img/Logo_orcamentosgraficos-01.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "img/Logo_orcamentosgraficos-01.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "img/Logo_orcamentosgraficos-01.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
     ],
-  
-    "scope":"/",
-   "start_url": "/",
+    "scope": "/",
+    "start_url": "/",
     "background_color": "#C0C0C0",
-    "display": "browser",
+    "display": "fullscreen",
     "theme_color": "#C0C0C0",
     "shortcuts": [
-      {
-        "name": "Orçamentos • Gráficos",
-        "short_name": "Orçamentos • Gráficos",
-        "description": "Orçamentos • Gráficos",
-        "url": "/?utm_source=homescreen",
-        "icons": [
-          {
-            "src": "img/Logo_orcamentosgraficos-01.png",
-            "sizes": "192x192"
-          }
-        ]
-      }
+        {
+            "name": "Orçamentos • Gráficos",
+            "short_name": "Orçamentos • Gráficos",
+            "description": "Orçamentos • Gráficos",
+            "url": "/?utm_source=homescreen",
+            "icons": [
+                {
+                    "src": "img/Logo_orcamentosgraficos-01.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
     ],
     "description": "Orçamentos • Gráficos",
     "prefer_related_applications": false,
     "url": "https://orcamentosgraficos.pt/",
     "screenshots": []
-  }
+}
