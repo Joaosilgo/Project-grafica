@@ -29,8 +29,8 @@
       
     ],
   
-    "scope":"/",
-   "start_url": "/?source=pwa",
+    "scope":"/Project-grafica/",
+   "start_url": "/Project-grafica/?source=pwa",
     "background_color": "#C0C0C0",
     "display": "fullscreen",
     "theme_color": "#C0C0C0",
