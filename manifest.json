@@ -30,7 +30,7 @@
     ],
   
     "scope":"/",
-   "start_url": "/?source=pwa",
+   "start_url": "/",
     "background_color": "#C0C0C0",
     "display": "browser",
     "theme_color": "#C0C0C0",
