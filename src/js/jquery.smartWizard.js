@@ -263,7 +263,7 @@
             $('.sw-btn-next', this.main).on("click", function (e) {
                 if (navigator.vibrate) {
                     console.log("vibrate");
-                    window.navigator.vibrate([100, 50, 100]);
+                    window.navigator.vibrate([50]);
                 }
                 e.preventDefault();
                 mi._showNext();

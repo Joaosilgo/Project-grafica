@@ -1,9 +1,9 @@
 
 
 
-    $('#empresa').change(function () {
-      $('#subject').val('Orçamentos Gráficos ' + $(this).val());
-    });
+$('#empresa').change(function () {
+  $('#subject').val('Orçamentos Gráficos ' + $(this).val());
+});
 
 (function () {
   'use strict';
@@ -76,10 +76,18 @@ $(document).ready(function () {
           var elmErr = elmForm.find('.has-error');
           if (elmErr && elmErr.length > 0) {
             alert('Ops, existe erros no formulário');
+            if (navigator.vibrate) {
+              console.log("vibrate");
+              window.navigator.vibrate([200, 50, 200]);
+            }
             return false;
           }
           else {
             alert('Ótimo! Estamos prontos para submeter o formulário');
+            if (navigator.vibrate) {
+              console.log("vibrate");
+              window.navigator.vibrate([50, 100, 50]);
+            }
             elmForm.submit();
             return false;
           }
@@ -92,6 +100,10 @@ $(document).ready(function () {
     .on('click', function () {
       $('#smartwizard').smartWizard("reset");
       $('#myForm').find("input, textarea").val("");
+      if (navigator.vibrate) {
+        console.log("vibrate");
+        window.navigator.vibrate([200, 50, 200]);
+      }
     });
 
   // Smart Wizard
