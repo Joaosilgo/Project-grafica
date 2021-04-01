@@ -10,7 +10,7 @@
  * https://github.com/techlab/SmartWizard/blob/master/LICENSE
  */
 
-;(function ($, window, document, undefined) {
+; (function ($, window, document, undefined) {
     "use strict";
     // Default options
 
@@ -158,13 +158,13 @@
                 return true;
             }
 
-             // Create the toolbar buttons
+            // Create the toolbar buttons
             var btnNext = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.next).addClass('btn btn-secondary sw-btn-next').attr('type', 'button') : null;
             btnNext.append('<i class="fas fa-step-forward"></i>');
             var btnPrevious = this.options.toolbarSettings.showPreviousButton !== false ? $('<button></button>').text(this.options.lang.previous).addClass('btn btn-secondary sw-btn-prev').attr('type', 'button') : null;
             btnPrevious.append('<i class="fas fa-undo-alt"></i>');
-  
-            
+
+
             var btnGroup = $('<div></div>').addClass('btn-group btn-group-sm mr-2 sw-btn-group').attr('role', 'group').append(btnPrevious, btnNext);
 
             // Add extra toolbar buttons
@@ -214,11 +214,11 @@
                     toolbarBottom.append(btnGroup.clone(true));
 
                     if (btnGroupExtra !== null) {
-                      if (this.options.toolbarSettings.toolbarButtonPosition === 'start') {
-                          toolbarBottom.prepend(btnGroupExtra.clone(true));
-                      } else {
-                          toolbarBottom.append(btnGroupExtra.clone(true));
-                      }
+                        if (this.options.toolbarSettings.toolbarButtonPosition === 'start') {
+                            toolbarBottom.prepend(btnGroupExtra.clone(true));
+                        } else {
+                            toolbarBottom.append(btnGroupExtra.clone(true));
+                        }
                     }
                     this.container.after(toolbarBottom);
                     break;
@@ -261,6 +261,10 @@
 
             // Next button event
             $('.sw-btn-next', this.main).on("click", function (e) {
+                if (navigator.vibrate) {
+                    console.log("vibrate");
+                    window.navigator.vibrate([100, 50, 100]);
+                }
                 e.preventDefault();
                 mi._showNext();
             });
@@ -522,7 +526,7 @@
             // Auto adjust height of the container
             if (this.options.autoAdjustHeight) {
                 var selPage = this.steps.eq(idx).length > 0 ? $(this.steps.eq(idx).attr("href"), this.main) : null;
-                this.container.finish().animate({ minHeight: selPage.outerHeight() }, this.options.transitionSpeed, function () {});
+                this.container.finish().animate({ minHeight: selPage.outerHeight() }, this.options.transitionSpeed, function () { });
             }
             return true;
         },
