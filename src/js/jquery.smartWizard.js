@@ -271,6 +271,10 @@
 
             // Previous button event
             $('.sw-btn-prev', this.main).on("click", function (e) {
+                if (navigator.vibrate) {
+                    console.log("vibrate");
+                    window.navigator.vibrate([50]);
+                }
                 e.preventDefault();
                 mi._showPrevious();
             });
