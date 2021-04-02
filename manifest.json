@@ -11,21 +11,52 @@
     ],
     "icons": [
         {
-            "src": "img/Logo_orcamentosgraficos-01.png",
+            "src": "img/logo512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "img/Logo_orcamentosgraficos-01.png",
+            "src": "img/logo192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "img/Logo_orcamentosgraficos-01.png",
+            "src": "img/logo196.png",
             "sizes": "196x196",
             "type": "image/png",
             "purpose": "any maskable"
+        },
+        {
+            "src": "img/logo256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+       
+        },
+        {
+            "src": "img/android-launchericon-96-96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+       
+        },
+        {
+            "src": "img/android-launchericon-144-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+       
+        },
+        {
+            "src": "img/android-launchericon-72-72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+       
+        },
+        {
+            "src": "img/android-launchericon-96-96.png",
+            "sizes": "48x48",
+            "type": "image/png"
+       
         }
+        
     ],
     "scope": "/",
     "start_url": "/",
@@ -40,7 +71,7 @@
             "url": "/?utm_source=homescreen",
             "icons": [
                 {
-                    "src": "img/Logo_orcamentosgraficos-01.png",
+                    "src": "img/logo192.png",
                     "sizes": "192x192"
                 }
             ]
