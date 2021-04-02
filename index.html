@@ -796,6 +796,57 @@
   </section>
 
 
+  <section class="subscription bg-white text-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="subscription-wrapper">
+            <div
+              class="d-flex subscription-content justify-content-between align-items-center flex-column flex-md-row text-center text-md-left">
+              <h3 class="flex-fill">Subscribe <br> to our newsletter</h3>
+              <form id="subscribeForm" action="https://formsubmit.co/joaosilgo96@gmail.com" role="form" method="post"
+                accept-charset="utf-8" enctype="multipart/form-data" data-toggle="validator" class="row flex-fill">
+
+                <div class="input-group">
+                  <div class="col-lg-7 my-md-2 my-2">
+                    <input id="subscribeEmail" type="email" 
+                      class="form-control px-4 border-0 w-100 text-center text-md-left" id="email"
+                      placeholder="Endereço de E-mail • " name="email" aria-label="Email address" required value>
+
+                  </div>
+                  <div class="col-lg-5 my-md-2 my-2">
+
+
+                    <span class="input-group-btn"><button type="submit"
+                        class="btn btn-info btn-sm border-0 w-100 js-notification-actions">
+                        <i class="fas fa-mail-bulk"></i> Subscribe Now </button>
+                    </span>
+
+                  </div>
+
+
+                  <input type="hidden" name="_autoresponse"
+                    value="Obrigado Por nos Contactar. Entraremos em Contacto Brevemente.">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="hidden" name="_template" value="box">
+                  <input type="hidden" name="_next" value="https://orcamentosgraficos.pt/">
+                  <input id="subject" type="hidden" name="_subject" value="Orçamentos • Gráficos">
+                  <input type="hidden" name="_replyto">
+
+                </div>
+
+
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 
 
@@ -832,7 +883,7 @@
             <a rel="noopener" aria-label="Instagram" href="https://www.instagram.com/orcamentos_graficos_consult/"
               target="_blank">
               <i class="fab fa-instagram"></i></a>
-              <a id="share" rel="noopener" aria-label="Share" href="" onclick="return false;">
+            <a id="share" rel="noopener" aria-label="Share" href="" onclick="return false;">
               <i class="fas fa-share-alt-square"></i></a>
           </div>
         </div>
@@ -845,7 +896,7 @@
   </footer>
 
   <script>
-   var shareButton = document.getElementById("share");
+    var shareButton = document.getElementById("share");
     shareButton.addEventListener("click", async () => {
       try {
         await navigator.share({ title: "Orçamentos • Gráficos", url: "https://orcamentosgraficos.pt/" });
@@ -858,6 +909,94 @@
     if (navigator.share === undefined) {
       shareButton.hidden = true;
     }
+
+
+
+
+
+    /**** Notification ****/
+
+    if ("Notification" in window) {
+      function getSW() {
+        return navigator.serviceWorker.getRegistration("service-worker.js");
+      }
+
+
+      console.log(getSW());
+
+      async function onActionsClick() {
+        const reg = await getSW();
+        /**** START actionsNotification ****/
+        const title = "Orçamentos Gráficos • Newsletter";
+        const subscriberEmail = document.querySelector("#subscribeEmail").value;
+        const options = {
+          body:
+            "Psst! Psst!" +
+            "\n" +
+            subscriberEmail +
+            "\nNão percas as Novidades de Orçamentos • Gráficos",
+          lang: "pt-PT",
+          tag: "Newsletter",
+          renotify: true,
+
+          dir: "auto",
+          requireInteraction: true,
+          icon: "/img/android-launchericon-192-192.png",
+          badge: "/img/android-launchericon-72-72.png"
+        };
+
+        Notification.requestPermission(function (result) {
+          if (result === "granted") {
+            reg.showNotification(title, options);
+          }
+        });
+      }
+
+      /**** END Notification ****/
+
+
+
+
+      function isActionsSupported() {
+        return "actions" in Notification.prototype;
+      }
+
+      window.addEventListener("load", () => {
+        if (!isActionsSupported()) {
+          return;
+        }
+
+
+        const btn = document.querySelector(".js-notification-actions");
+        const form = document.querySelector("#subscribeForm");
+
+        btn.disabled = false;
+
+        form.addEventListener("submit", function (evt) {
+          evt.preventDefault();
+          onActionsClick();
+          setTimeout(function () { form.submit(); }, 3750);
+        });
+      })
+    }
+
+
+
+
+
+    if (navigator.vibrate) {
+      //navigator.vibrate(1000);
+      inputs = document.querySelector("#subscribeEmail");
+      inputs.addEventListener(
+        "invalid",
+        function (e) {
+          console.log("vibrate");
+          window.navigator.vibrate([100, 50, 100]);
+        },
+        false
+      );
+    }
+
   </script>
 
 
