@@ -4,7 +4,6 @@
     "dir": "auto",
     "lang": "pt",
     "orientation": "any",
-   
     "icons": [
         {
             "src": "img/logo512.png",
@@ -161,13 +160,16 @@
     "description": "Orçamentos • Gráficos",
     "prefer_related_applications": false,
     "url": "https://orcamentosgraficos.pt/",
-    "categories": ["business", "personalization", "photo"],
-
-    "screenshots" : [
+    "categories": [
+        "business",
+        "personalization",
+        "photo"
+    ],
+    "screenshots": [
         {
-          "src": "screenshot1.png",
-          "sizes": "1439x9618",
-          "type": "image/png"
+            "src": "screenshot1.png",
+            "sizes": "1439x9618",
+            "type": "image/png"
         }
-      ]
+    ]
 }
