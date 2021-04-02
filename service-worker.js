@@ -24,7 +24,6 @@ const PRECACHE_URLS = [
     './submit.html',
     './termos&condicoes.html',
     './manifest.json',
-    './img/',
     offlineUrl
 ];
 
