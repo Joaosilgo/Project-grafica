@@ -4,11 +4,7 @@
     "dir": "auto",
     "lang": "pt",
     "orientation": "any",
-    "categories": [
-        "budget",
-        "design",
-        "graphic"
-    ],
+   
     "icons": [
         {
             "src": "img/logo512.png",
@@ -165,5 +161,6 @@
     "description": "Orçamentos • Gráficos",
     "prefer_related_applications": false,
     "url": "https://orcamentosgraficos.pt/",
+    "categories": ["budget", "design", "graphic"],
     "screenshots": []
 }
