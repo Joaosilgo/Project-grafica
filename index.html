@@ -832,6 +832,8 @@
             <a rel="noopener" aria-label="Instagram" href="https://www.instagram.com/orcamentos_graficos_consult/"
               target="_blank">
               <i class="fab fa-instagram"></i></a>
+              <a id="share" rel="noopener" aria-label="Share" href="" onclick="return false;">
+              <i class="fas fa-share-alt-square"></i></a>
           </div>
         </div>
       </div>
@@ -841,6 +843,22 @@
             Inc.</a></small></p>
     </div>
   </footer>
+
+  <script>
+   var shareButton = document.getElementById("share");
+    shareButton.addEventListener("click", async () => {
+      try {
+        await navigator.share({ title: "Orçamentos • Gráficos", url: "https://orcamentosgraficos.pt/" });
+        console.log("Data was shared successfully");
+      } catch (err) {
+        console.error("Share failed:", err.message);
+      }
+    });
+
+    if (navigator.share === undefined) {
+      shareButton.hidden = true;
+    }
+  </script>
 
 
 

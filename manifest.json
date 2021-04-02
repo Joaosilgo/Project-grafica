@@ -33,121 +33,103 @@
             "sizes": "256x256",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/logo36.png",
             "sizes": "36x36",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/logo180.png",
             "sizes": "180x180",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/android-launchericon-96-96.png",
             "sizes": "96x96",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/android-launchericon-144-144.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/android-launchericon-72-72.png",
             "sizes": "72x72",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/android-launchericon-48-48.png",
             "sizes": "48x48",
             "type": "image/png",
             "purpose": "any"
-       
         },
         {
             "src": "img/android-launchericon-96-96_1.png",
             "sizes": "96x96",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/android-launchericon-144-144_1.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/android-launchericon-72-72_1.png",
             "sizes": "72x72",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/android-launchericon-48-48_1.png",
             "sizes": "48x48",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/android-launchericon-512-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/android-launchericon-192-192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/logo196_1.png",
             "sizes": "196x196",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/logo256_1.png",
             "sizes": "256x256",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/logo36_1.png",
             "sizes": "36x36",
             "type": "image/png",
             "purpose": "maskable"
-       
         },
         {
             "src": "img/logo180_1.png",
             "sizes": "180x180",
             "type": "image/png",
             "purpose": "maskable"
-       
         }
-        
     ],
     "scope": "/",
     "start_url": "/",
