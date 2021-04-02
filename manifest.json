@@ -162,5 +162,12 @@
     "prefer_related_applications": false,
     "url": "https://orcamentosgraficos.pt/",
     "categories": ["budget", "design", "graphic"],
-    "screenshots": []
+
+    "screenshots" : [
+        {
+          "src": "screenshot1.png",
+          "sizes": "1439x9618",
+          "type": "image/png"
+        }
+      ]
 }
