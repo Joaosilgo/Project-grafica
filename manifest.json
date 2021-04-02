@@ -157,9 +157,21 @@
     "shortcuts": [
         {
             "name": "Orçamentos • Gráficos",
-            "short_name": "Orçamentos • Gráficos",
+            "short_name": "• Pedir Orçamento",
             "description": "Orçamentos • Gráficos",
             "url": "/?utm_source=homescreen",
+            "icons": [
+                {
+                    "src": "img/logo192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Orçamentos • Gráficos",
+            "short_name": "• Termos & Condicões",
+            "description": "Orçamentos • Gráficos",
+            "url": "/termos&condicoes",
             "icons": [
                 {
                     "src": "img/logo192.png",
