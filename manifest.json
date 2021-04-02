@@ -36,6 +36,13 @@
        
         },
         {
+            "src": "img/logo36.png",
+            "sizes": "36x36",
+            "type": "image/png",
+            "purpose": "any"
+       
+        },
+        {
             "src": "img/android-launchericon-96-96.png",
             "sizes": "96x96",
             "type": "image/png",
@@ -115,6 +122,13 @@
         {
             "src": "img/logo256_1.png",
             "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "maskable"
+       
+        },
+        {
+            "src": "img/logo36_1.png",
+            "sizes": "36x36",
             "type": "image/png",
             "purpose": "maskable"
        

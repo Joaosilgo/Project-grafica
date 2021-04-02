@@ -1,0 +1,6 @@
+
+# Group 1
+User-agent: *
+Allow: /
+
+Sitemap: http://orcamentosgraficos.pt/sitemap.xml
