@@ -62,6 +62,41 @@
             "type": "image/png",
             "purpose": "any"
        
+        },
+        {
+            "src": "img/android-launchericon-96-96_1.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable"
+       
+        },
+        {
+            "src": "img/android-launchericon-144-144_1.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable"
+       
+        },
+        {
+            "src": "img/android-launchericon-72-72_1.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "maskable"
+       
+        },
+        {
+            "src": "img/android-launchericon-48-48_1.png",
+            "sizes": "48x48",
+            "type": "image/png",
+            "purpose": "maskable"
+       
+        },
+        {
+            "src": "img/android-launchericon-512-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+       
         }
         
     ],
