@@ -796,6 +796,10 @@
   </section>
 
 
+
+
+
+
   <section class="subscription bg-white text-secondary">
     <div class="container">
       <div class="row">
@@ -807,39 +811,39 @@
               <form id="subscribeForm" action="https://formsubmit.co/joaosilgo96@gmail.com" role="form" method="post"
                 accept-charset="utf-8" enctype="multipart/form-data" data-toggle="validator" class="row flex-fill">
 
-                <div class="input-group">
-                  <div class="col-lg-7 my-md-2 my-2">
-                    <input id="subscribeEmail" type="email" 
-                      class="form-control px-4 border-0 w-100 text-center text-md-left" id="email"
-                      placeholder="Endereço de E-mail • " name="email" aria-label="Email address" required value>
 
-                  </div>
-                  <div class="col-lg-5 my-md-2 my-2">
+                <div class="col-lg-7 my-md-2 my-2">
+                  <input id="subscribeEmail" type="email"
+                    class="form-control px-4 border-0 w-100 text-center text-md-left" id="email"
+                    placeholder="Endereço de E-mail • " name="email" aria-label="Email address"
+                    data-error="*Insira o seu Contacto" required="true"  required value>
 
-
-                    <span class="input-group-btn"><button type="submit"
-                        class="btn btn-info btn-sm border-0 w-100 js-notification-actions">
-                        <i class="fas fa-mail-bulk"></i> Subscribe Now </button>
-                    </span>
-
-                  </div>
+                </div>
+                <div class="col-lg-5 my-md-2 my-2">
 
 
-                  <input type="hidden" name="_autoresponse"
-                    value="Obrigado Por nos Contactar. Entraremos em Contacto Brevemente.">
-                  <input type="hidden" name="_captcha" value="false">
-                  <input type="hidden" name="_template" value="box">
-                  <input type="hidden" name="_next" value="https://orcamentosgraficos.pt/">
-                  <input id="subject" type="hidden" name="_subject" value="Orçamentos • Gráficos">
-                  <input type="hidden" name="_replyto">
+                  <button type="submit" class="btn btn-info btn-sm border-0 w-100 js-notification-actions">
+                    <i class="fas fa-mail-bulk"></i> Subscribe Now </button>
+
 
                 </div>
 
 
+                <input type="hidden" name="_autoresponse"
+                  value="Obrigado Por nos Contactar. Entraremos em Contacto Brevemente.">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="https://orcamentosgraficos.pt/">
+                <input id="subject" type="hidden" name="_subject" value="Orçamentos • Gráficos">
+                <input type="hidden" name="_replyto">
 
-
-              </form>
             </div>
+
+
+
+
+            </form>
+
           </div>
         </div>
       </div>
@@ -975,7 +979,8 @@
         form.addEventListener("submit", function (evt) {
           evt.preventDefault();
           onActionsClick();
-          setTimeout(function () { form.submit(); }, 3750);
+          form.submit();
+          // setTimeout(function () { form.submit(); }, 3750);
         });
       })
     }

@@ -14,27 +14,29 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
+// Set a name for the current cache
+var cacheName = 'v1';
 const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 const offlineUrl = './offline.html';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-    './', // Alias for index.html
-    './submit.html',
-    './termos&condicoes.html',
-    './manifest.json',
-    offlineUrl
+  './', // Alias for index.html
+  './submit.html',
+  './termos&condicoes.html',
+  './manifest.json',
+  offlineUrl
 ];
 
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
-    console.log('[ServiceWorker] Installed');
-    event.waitUntil(
-        caches.open(PRECACHE)
-            .then(cache => cache.addAll(PRECACHE_URLS))
-            .then(self.skipWaiting())
-    );
+  console.log('[ServiceWorker] Installed');
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
+  );
 });
 
 /*
@@ -52,6 +54,8 @@ self.addEventListener('activate', event => {
   );
 });
 */
+
+/*
 self.addEventListener('activate', (event) => {
     event.waitUntil((async () => {
         // Enable navigation preload if it's supported.
@@ -62,6 +66,25 @@ self.addEventListener('activate', (event) => {
     })());
     // Tell the active service worker to take control of the page immediately.
     self.clients.claim();
+});
+*/
+
+
+self.addEventListener('activate', function (e) {
+  console.log('[ServiceWorker] Activated');
+  e.waitUntil(
+    // Get all the cache keys (cacheName)
+    caches.keys().then(function (cacheNames) {
+      return Promise.all(cacheNames.map(function (thisCacheName) {
+        // If a cached item is saved under a previous cacheName
+        if (thisCacheName !== cacheName) {
+          // Delete that cached file
+          console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
+          return caches.delete(thisCacheName);
+        }
+      }));
+    })
+  ); // end e.waitUntil
 });
 
 // The fetch handler serves responses for same-origin resources from a cache.
@@ -92,35 +115,25 @@ self.addEventListener('fetch', event => {
 */
 
 this.addEventListener('fetch', event => {
-    // request.mode = navigate isn't supported in all browsers
-    // so include a check for Accept: text/html header.
-    if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        event.respondWith(
-            fetch(event.request.url).catch(error => {
-                // Return the offline page
-                return caches.match(offlineUrl);
-            })
-        );
-    }
-    else {
-        // Respond with everything else if we can
-        event.respondWith(caches.match(event.request)
-            .then(function (response) {
-                return response || fetch(event.request);
-            })
-        );
-    }
+  // request.mode = navigate isn't supported in all browsers
+  // so include a check for Accept: text/html header.
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      fetch(event.request.url).catch(error => {
+        // Return the offline page
+        return caches.match(offlineUrl);
+      })
+    );
+  }
+  else {
+    // Respond with everything else if we can
+    event.respondWith(caches.match(event.request)
+      .then(function (response) {
+        return response || fetch(event.request);
+      })
+    );
+  }
 });
 
 
 
-
-/**** START notificationclose ****/
-self.addEventListener('notificationclose', function(e) {
-  var notification = e.notification;
-  var primaryKey = notification.data.primaryKey;
-
-  console.log('Closed notification: ' + primaryKey);
-});
-  
- /**** END notificationclose ****/
