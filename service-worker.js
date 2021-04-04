@@ -168,14 +168,16 @@ self.addEventListener('notificationclick', function (event) {
     case 'coffee-action':
       console.log('User ❤️️\'s coffee.');
       // self.open('https://orcamentosgraficos.pt/', '_blank');
-      clients.openWindow('https://orcamentosgraficos.pt/');
+      clients.openWindow('https://instagram.com/_u/orcamentos_graficos_consult/');
 
       break;
     case 'doughnut-action':
       console.log('User ❤️️\'s doughnuts.');
-      clients.openWindow('https://orcamentosgraficos.pt/').then(function (client) {
-        client.navigate('https://orcamentosgraficos.pt/');
-      });
+
+      // clients.openWindow('https://orcamentosgraficos.pt/').then(function (client) {
+      //  client.navigate('https://orcamentosgraficos.pt/'); });
+
+      clients.openWindow(' https://www.linkedin.com/in/or%C3%A7amentos-gr%C3%A1ficos/');
       break;
     case 'gramophone-action':
       console.log('User ❤️️\'s music.');

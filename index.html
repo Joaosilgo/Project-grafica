@@ -829,23 +829,28 @@
           <div class="subscription-wrapper">
             <div
               class="d-flex subscription-content justify-content-between align-items-center flex-column flex-md-row text-center text-md-left">
-              <h3 class="flex-fill">Subscribe <br> to our newsletter</h3>
+              <h3 class="flex-fill">Subscreva <br> a nossa Newsletter</h3>
               <form id="subscribeForm" action="https://formsubmit.co/joaosilgo96@gmail.com" role="form" method="post"
                 accept-charset="utf-8" enctype="multipart/form-data" data-toggle="validator" class="row flex-fill">
 
 
                 <div class="col-lg-7 my-md-2 my-2">
-                  <input id="subscribeEmail" type="email"
-                    class="form-control px-4 border-0 w-100 text-center text-md-left" id="email"
-                    placeholder="Endereço de E-mail • " name="email" aria-label="Email address"
-                    data-error="*Insira o seu Contacto" required="true" required value>
+                  <div class="form-group">
+                    <input id="subscribeEmail" type="email"
+                      class="form-control px-4 border-0 w-100 text-center text-md-left" id="email"
+                      placeholder="Endereço de E-mail • " name="email" aria-label="Email address"
+                      data-error="          *   Insira o seu Email ..." required="true" required value>
+                    <small class="text-muted">
+                      <div class="  help-block with-errors"></div>
+                    </small>
 
+                  </div>
                 </div>
                 <div class="col-lg-5 my-md-2 my-2">
 
 
                   <button type="submit" class="btn btn-info btn-sm border-0 w-100 js-notification-actions">
-                    <i class="fas fa-mail-bulk"></i> Subscribe Now </button>
+                    <i class="fas fa-mail-bulk"></i> Subscrever </button>
 
 
                 </div>
@@ -906,7 +911,7 @@
             <a rel="noopener" aria-label="Facebook" href="https://www.facebook.com/Orçamentos-Gráficos-107387214258954"
               target="_blank">
               <i class="fab fa-facebook-f"></i></a>
-            <a rel="noopener" aria-label="Instagram" href="https://www.instagram.com/orcamentos_graficos_consult/"
+            <a rel="noopener" aria-label="Instagram" href="https://instagram.com/_u/orcamentos_graficos_consult/"
               target="_blank">
               <i class="fab fa-instagram"></i></a>
             <a id="share" rel="noopener" aria-label="Share" href="" onclick="return false;">
@@ -961,13 +966,13 @@
               action: "coffee-action",
               title: "Instagram",
               icon:
-                "/img/instagram-128"
+                "/img/instagram-6-128.png"
             },
             {
               action: "doughnut-action",
-              title: "Facebook",
+              title: "Linkedin",
               icon:
-                "/img/badge-128x128.png"
+                "/img/linkedin-128.png"
             },
             {
               action: "gramophone-action",
@@ -1024,12 +1029,32 @@
 
         btn.disabled = false;
 
+
         form.addEventListener("submit", function (evt) {
-          evt.preventDefault();
-          onActionsClick();
-          form.submit();
+          // evt.preventDefault();
+          //  onActionsClick();
+          // form.submit();
           // setTimeout(function () { form.submit(); }, 3750);
-        });
+
+
+
+          if (form.checkValidity() === false) {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+          }
+          else {
+            onActionsClick();
+            form.submit();
+          }
+
+          form.classList.add('was-validated');
+
+        }, false);
+
+
+
+
       })
     }
 
