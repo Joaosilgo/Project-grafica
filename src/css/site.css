@@ -167,7 +167,7 @@ It's also at the bottom-most position in our "div stack" (z-index 1)
 We set the image url via a CSS custom property, that's set via the style attribute in our HTML
 */
 .image-box__background {
-  background: url("../../img/offset-printing-3562696_1280\ \(2\).jpg") center center no-repeat;
+  background: url("../../img/offset-printing-3562696_1280\ \(2\).jpg") center center no-repeat ;
   background-size: cover;
   z-index: 1
 }
